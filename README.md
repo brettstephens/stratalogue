@@ -12,3 +12,5 @@ CREATE DATABASE stratalogue;create user 'rushb'@'localhost' identified by 'backt
 exit
 
 python manage.py migrate
+
+manage.py runserver 0.0.0.0:8000
