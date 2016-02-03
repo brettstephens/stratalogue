@@ -1,0 +1,23 @@
+{% load staticfiles %}
+
+<html>
+	<head>
+	    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}"/>
+	    <link rel="stylesheet" type="text/css" href="{% static 'css/core.css' %}" />
+	    <script src="{% static 'js/jquery-1.12.0.js' %}"></script>
+	    <script src="{% static 'js/bootstrap.js' %}"></script>
+	    <script src="{% static 'js/core.js' %}"></script>
+	 </head>
+	<body>
+		<div class="header">
+			{% include 'header.html' %}
+		</div>
+		<div class="content">
+				{% block content %}
+				{% endblock content %}
+		</div>
+		<div class="footer">
+			{% include 'footer.html' %}
+		</div>
+	</body>
+</html>
