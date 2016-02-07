@@ -25,11 +25,4 @@ pip install django
 pip install MySQL-python
 
 
-mysql -u root -pbacktoa 
-mysql -e "CREATE DATABASE stratalogue;"
-mysql -e "create user 'rushb'@'localhost' identified by 'backtoa';"
-mysql -e "GRANT ALL PRIVILEGES ON * . * TO 'rushb'@'localhost';"
-mysql -e "exit"
-
-
 deactivate
