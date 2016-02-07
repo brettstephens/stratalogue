@@ -1,7 +1,6 @@
 body {
 	background-color: #181717;
 	margin: 0 auto;
-	max-width: 1100px;
 }
 
 
@@ -12,10 +11,9 @@ body {
 	display: inline-block;
 	width: 100%;
 	height: auto;
-	margin: 0 auto;
 
-	background-color: #444;
-	border-radius: 0 0 5px 5px;
+	background-color: #333;
+	box-shadow: 10px;
 }
 
 .logo {
@@ -29,6 +27,7 @@ body {
 
 .nav-menu-container {
 	display: inline-block;
+	margin-left: 12.5%;
 
 	border-radius: 5px;
 	text-align: center;
@@ -40,7 +39,6 @@ ul.nav-menu{
     padding: 0;
     overflow: hidden;
     background-color: #333;
-    border-radius: 0px 0px 0px 5px;
 }
 
 li.nav-item{
@@ -74,26 +72,27 @@ li a.nav-item:hover {
 	height: 100%;
 	margin: 5% 0;
 
-	background-color: #444;
+	background-color: #181717;
 	border-radius: 5px;
 }
 
-.content-menu {
-	display: inline-block;
+/*.content-menu {
+	float: left;
 	width: 17.5%;
 	height: 94%;
-	margin: 2%;
+	margin-right: 3%;
 
 	background-color: #666;
 	border-radius: 5px;
-}
+}*/
 
 .content-main {
-	display: inline-block;
-	width: 73.5%;
-	height: 94%;
-	margin: 2%;
+	overflow: hidden;
+	height: 100%;
+	width: 75%;
+	margin: 0 auto;
 
-	background-color: #666;
+	background-color: #333;
 	border-radius: 5px;
+	box-shadow: 10px;
 }
