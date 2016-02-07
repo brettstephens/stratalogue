@@ -1,6 +1,7 @@
 body {
 	background-color: #181717;
 	margin: 0 auto;
+	height: 100%;
 }
 
 
@@ -58,23 +59,13 @@ a.nav-item {
 
 }
 
-/* Change the link color to #111 (black) on hover */
 li a.nav-item:hover {
-    background-color: #111;
+    background-color: #181717;
 }
 
 /****************/
 /***** Body *****/
 /****************/
-.content-body {
-	display: inline-block;
-	width: 100%;
-	height: 100%;
-	margin: 5% 0;
-
-	background-color: #181717;
-	border-radius: 5px;
-}
 
 /*.content-menu {
 	float: left;
@@ -86,13 +77,28 @@ li a.nav-item:hover {
 	border-radius: 5px;
 }*/
 
-.content-main {
-	overflow: hidden;
-	height: 100%;
+.content-body {
+	display: block;
+	min-height: 50%;
 	width: 75%;
 	margin: 0 auto;
+	margin-top: 5%;
+
 
 	background-color: #333;
 	border-radius: 5px;
 	box-shadow: 10px;
+}
+
+.content-main {
+	overflow: hidden;
+	width: 75%;
+	margin: auto;
+	min-height: 50%;
+
+	color: white;
+}
+
+.registration-inputs {
+	margin-bottom: 2%;
 }
