@@ -104,8 +104,6 @@ li a.nav-item:hover {
 }
 
 .message-box {
-	display: none;
-
 	border-radius: 5px;
 }
 
@@ -130,4 +128,13 @@ li a.nav-item:hover {
 }
 .validation-error:placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
   color: #ff6666;
+}
+
+.login-container {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.hide-element {
+	display: none;
 }

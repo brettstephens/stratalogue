@@ -11,8 +11,13 @@
 				<li class="nav-item"><a href="#" class="nav-item">Create Playbook</a></li>
 				<li class="nav-item"><a href="#" class="nav-item">User Playbooks</a></li>
 				<li class="nav-item"><a href="#" class="nav-item">Pro Playbooks</a></li>
-				<li class="nav-item"><a href="{% url 'registration' %}" class="nav-item">Register</a></li>
-				<li class="nav-item"><a href="#" class="nav-item">Log In</a></li>
+				{% if not user.is_authenticated %}
+					<li class="nav-item"><a href="{% url 'registration' %}" class="nav-item">Register</a></li>
+					<li class="nav-item"><a href="{% url 'login' %}" class="nav-item">Log In</a></li>
+				{% else %}
+					<li class="nav-item"><a href="{% url 'logout' %}" class="nav-item">Logout</a></li>
+				{% endif %}
+
 			</ul>
 		</div>
 	</div>

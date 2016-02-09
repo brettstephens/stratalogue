@@ -62,5 +62,18 @@ $(document).ready(function() {
 		}
 		
 
-	})
+	});
+
+	$('#login_submit').click(function() {
+		var input_ids = [$('#username'), $('#password')];
+		$('.error-list').empty();
+
+		var validation_error = validate_entry(input_ids);
+
+		if (validation_error) {
+			$('.message-box').show();
+			return false;
+		}
+
+	});
 });
