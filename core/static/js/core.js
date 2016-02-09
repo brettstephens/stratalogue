@@ -7,7 +7,7 @@ $(document).ready(function() {
 		$.each(input_ids, function(index, value) {
 			if ( !$(value).val() ) {
 				$(value).addClass('validation-error');
-				$('.error-list').append('<li>' + $(value).attr('name') + ' field required.</li>');
+				$('.error-list').append('<li>' + $(value).attr('data-error') + ' field required.</li>');
 				validation_error = 1;
 			}
 			else {
