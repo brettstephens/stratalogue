@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block content %}
+<div class="content-body">
+	<div class="content-main">
+		<h2>Register an account to create Playbooks</h2>
+		<hr/>
+		<form id="registration_form" action="{% url 'registration' %}" class="form-group col-md-6" method="post">
+			<div class="message-box alert-danger">
+				<ul class="error-list">
+				</ul>
+			</div>
+
+			{% csrf_token %}
+			<label for="username" class="control-label">Username:</label>
+			<input id="username" class="form-control registration-inputs" type="text" name="username" placeholder="Username" data-error="Username"/>
+			<label for="email" class="control-label">Email:</label>
+			<input id="email" class="form-control registration-inputs" type="text" name="email" placeholder="Email" data-error="Email"/>
+			<label for="password1" class="control-label">Password:</label>
+			<input id="password1" class="form-control registration-inputs" type="password" name="password1" placeholder="Password (Minimum 6 characters)" data-error="Password"/>
+			<label for="password2" class="control-label">Enter Password Again:</label>
+			<input id="password2" class="form-control registration-inputs" type="password" name="password2" placeholder="Enter Password Again" data-error="Verify Password"/>
+			<input id="registration_submit" class="btn btn-success col-md-offset-9" type="submit" value="Register"/>
+		</form>
+		<div class="col-md-6">
+			<p>Creating an account allows you to create, edit, and share your playbooks with your teammates.</p>
+			<p>After clicking on the Register button, you will be sent an email asking you to confirm your account by clicking on a confirmation link.</p>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
