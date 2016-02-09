@@ -102,3 +102,32 @@ li a.nav-item:hover {
 .registration-inputs {
 	margin-bottom: 2%;
 }
+
+.message-box {
+	display: none;
+
+	border-radius: 5px;
+}
+
+.validation-error {
+	border: 1px solid   #ff6666; 
+	border-radius: 1px;
+}
+
+.validation-error::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #ff6666;
+}
+.validation-error:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #ff6666;
+   opacity:  1;
+}
+.validation-error::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #ff6666;
+   opacity:  1;
+}
+.validation-error:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #ff6666;
+}
+.validation-error:placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+  color: #ff6666;
+}
