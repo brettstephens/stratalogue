@@ -12,9 +12,8 @@ def registration(request):
 
 	if request.POST:
 		registration_form = RegistrationForm(request.POST)
-		print 'ay'
+
 		if registration_form.is_valid():
-			print 'b'
 			username = registration_form.cleaned_data['username']
 			email = registration_form.cleaned_data['email']
 			password1 = registration_form.cleaned_data['password1']
