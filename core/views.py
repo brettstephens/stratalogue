@@ -23,6 +23,8 @@ def registration(request):
 			if password1 == password2:
 				new_user = User.objects.create(username=username, email=email)
 				new_user.set_password(password1)
+
+				# TODO: Send confirmation email and have user confirm their email
 				new_user.save()
 				return redirect('registration_success')
 
