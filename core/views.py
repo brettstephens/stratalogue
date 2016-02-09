@@ -1,11 +1,43 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login, logout
+from django.contrib import messages
 
-from .forms import RegistrationForm 
+from django.contrib.auth.models import User
+from .forms import RegistrationForm, LoginForm
 
 def index(request):
 
 	return render(request, 'index_template_1.html')
+
+
+def login_user(request):
+
+	if request.POST:
+		login_form = LoginForm(request.POST)
+
+		if login_form.is_valid():
+			username = login_form.cleaned_data['username']
+			password = login_form.cleaned_data['password']
+
+			user = authenticate(username=username, password=password)
+
+			if user is not None:
+				login(request, user)
+				return redirect('index')
+
+			else:
+				messages.add_message(request, messages.INFO, "Username or password invalid.")
+				return redirect('login')
+
+
+	return render(request, 'login.html')
+
+
+def logout_user(request):
+	logout(request)
+
+	return redirect('login')
+
 
 
 def registration(request):
