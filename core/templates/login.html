@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="content-body">
+
+	<div class="content-main">
+		<div class="login-container">
+			<h2>Login to Stratalogue</h2>
+			<hr/>
+			<form id="login_form" action="{% url 'login' %}" class="form-group col-md-9" method="post">
+				<div class="message-box alert-danger {% if not messages %}hide-element {% endif %}">
+					<ul class="error-list">
+						{% if messages %}
+							{% for message in messages %}
+								<li>{{ message }}</li>
+							{% endfor %}
+						{% endif %}
+					</ul>
+				</div>
+
+				{% csrf_token %}
+				<label for="username" class="control-label">Username:</label>
+				<input id="username" class="form-control registration-inputs" type="text" name="username" placeholder="Username" data-error="Username"/>
+				<label for="password" class="control-label">Password:</label>
+				<input id="password" class="form-control registration-inputs" type="password" name="password" placeholder="Password" data-error="Password"/>
+				<input id="login_submit" class="btn btn-success col-md-offset-9" type="submit" value="Login"/>
+			</form>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
