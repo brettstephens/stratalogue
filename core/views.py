@@ -10,6 +10,11 @@ def index(request):
 	return render(request, 'index_template_1.html')
 
 
+def create_playbook(request):
+
+	return render(request, 'create_playbook.html')
+
+
 def login_user(request):
 
 	if request.POST:
